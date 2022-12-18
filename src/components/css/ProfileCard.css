@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(30, 42, 71);
+  border-radius: 0.5rem;
+  padding: 2rem 1.5rem 3rem 1.5rem;
+}
+.profile-card .profile {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-right: auto;
+  margin-bottom: 2.125rem;
+}
+.profile-card .profile img {
+  width: 4.375rem;
+  border-radius: 50%;
+  margin-right: 1.25rem;
+}
+.profile-card .profile .profile-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.profile-card .profile .profile-info h1.username {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 700;
+}
+.profile-card .profile .profile-info a.github-user {
+  color: rgb(0, 121, 255);
+  font-size: 0.75rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  text-decoration: none;
+}
+.profile-card .profile .profile-info .joining-date {
+  font-size: 0.75rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+.profile-card .bio {
+  width: 100%;
+  height: 4.75rem;
+  font-size: 0.75rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+.profile-card .stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(20, 29, 47);
+  height: 5.275rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem;
+}
+.profile-card .stats .data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 3rem;
+}
+.profile-card .stats h4 {
+  margin-bottom: 0.5rem;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+}
+.profile-card .stats span {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 700;
+}
+.profile-card .contact-data {
+  margin-right: auto;
+  height: 8rem;
+}
+.profile-card .contact-data .contact {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+.profile-card .contact-data .contact img {
+  margin-right: 1.25rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  filter: brightness(0) invert(1);
+}
+.profile-card .contact-data .not-available img {
+  filter: brightness(0) saturate(100%) invert(50%) sepia(7%) saturate(1605%) hue-rotate(178deg) brightness(94%) contrast(87%);
+}
+.profile-card .not-available {
+  color: rgb(105, 124, 154);
+}
+
+#light .profile-card {
+  background-color: rgb(254, 254, 254);
+  box-shadow: 0px 5px 5px 5px rgba(30, 42, 71, 0.25);
+}
+#light .profile-card .profile .username {
+  color: rgb(20, 29, 47);
+}
+#light .profile-card .stats {
+  background-color: rgb(254, 254, 254);
+}
+#light .profile-card .stats span {
+  color: rgb(20, 29, 47);
+}
+#light .profile-card .contact img {
+  filter: brightness(0) saturate(100%) invert(6%) sepia(34%) saturate(2933%) hue-rotate(201deg) brightness(90%) contrast(89%);
+}
+#light .profile-card .not-available {
+  color: rgb(105, 124, 154);
+}
+#light .profile-card .not-available img {
+  filter: brightness(0) saturate(100%) invert(50%) sepia(7%) saturate(1605%) hue-rotate(178deg) brightness(94%) contrast(87%);
+}/*# sourceMappingURL=ProfileCard.css.map */

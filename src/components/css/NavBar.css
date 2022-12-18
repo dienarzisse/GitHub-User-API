@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2.25rem;
+}
+nav header {
+  text-transform: lowercase;
+  font-size: 1.625rem;
+  line-height: 2.375rem;
+  font-weight: 700;
+  text-align: left;
+}
+nav .theme-mode {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+}
+nav .theme-mode span {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+  text-align: right;
+  margin-right: 1rem;
+}
+nav .theme-mode img {
+  max-width: 1.25rem;
+  cursor: pointer;
+}
+nav .theme-mode:hover {
+  color: rgb(105, 124, 154);
+}
+nav .theme-mode:hover img {
+  filter: brightness(0) saturate(100%) invert(50%) sepia(7%) saturate(1605%) hue-rotate(178deg) brightness(94%) contrast(87%);
+}
+
+#light nav header {
+  color: rgb(20, 29, 47);
+}
+#light nav .theme-mode:hover {
+  color: rgb(20, 29, 47);
+}
+#light nav .theme-mode:hover img {
+  filter: brightness(0) saturate(100%) invert(6%) sepia(34%) saturate(2933%) hue-rotate(201deg) brightness(90%) contrast(89%);
+}/*# sourceMappingURL=NavBar.css.map */

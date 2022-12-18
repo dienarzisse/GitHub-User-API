@@ -1,0 +1,40 @@
+// importing font
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+// colors
+$light-blue: rgb(0, 121, 255);
+$light-grey: rgb(105, 124, 154);
+$greish-blue: rgb(30, 42, 71);
+$dark-greish-blue: rgb(20, 29, 47);
+$light-beige: rgb(246, 248, 255);
+$white: rgb(254, 254, 254);
+
+// typography
+$font-family: "Space Mono", sans-serif;
+$font-weights: (
+    "regular":400,
+    "bold": 700
+);
+
+$font-sizes: (
+    "h1": 1.625rem,
+    "h2": 1.375rem,
+    "h3": 1rem,
+    "h4": 0.75rem,
+    "body":0.75rem
+);
+
+$line-heights: (
+    "h1": 2.375rem,
+    "h2": 2rem,
+    "h3": 1.5rem,
+    "h4": 1.25rem,
+    "body": 1.5rem
+);
+
+// responsitivty
+
+$tablet: 768px;
+$tablet-app-width: 35.875rem;
+$desktop: 1440px;
+$desktop-app-widt: 45.625rem;
