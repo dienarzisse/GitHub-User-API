@@ -29,10 +29,7 @@
   }
 }
 @media screen and (min-width: 1440px) {
-  .App {
-    justify-content: center;
-  }
   .wrapper {
-    min-width: 35.875rem;
+    min-width: 45.625rem !important;
   }
 }/*# sourceMappingURL=App.css.map */

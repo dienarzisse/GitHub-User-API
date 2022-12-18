@@ -16,8 +16,13 @@ function App() {
 
   useEffect(() => {
     async function getFirstData(){
-      const userData = await axios.get(`https://api.github.com/users/octocat`);
-      setData(userData.data);
+      try {
+        const userData = await axios.get(`https://api.github.com/users/octocat`);
+        setData(userData.data);
+      }
+      catch(err) {
+        console.log(err);
+      }
     }
     getFirstData();
   }, []);

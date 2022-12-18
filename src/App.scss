@@ -35,6 +35,6 @@
  // desktop view
  @media screen and (min-width: $desktop) {
     .wrapper{
-        min-width: $desktop-app-width;
+        min-width: $desktop-app-width !important;
     }
  }
