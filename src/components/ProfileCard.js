@@ -22,18 +22,20 @@ function ProfileCard({ userData }){
 
 
     return (
-        <div className="profile-card">
+        <div className="profile-card"> <img className="profile-img" src={profileImage ? profileImage : defaultProfileImage } alt="github profile"></img>
+            <div className="profile-wrapper">
             <div className="profile">
-                <img src={profileImage ? profileImage : defaultProfileImage } alt="github profile"></img>
                 <div className="profile-info">
                     <h1 className={ name ? "username":"username not-available"}>{ name ? name : "Not Available" }</h1>
                     <a className="github-user" href={`https://github.com/${username}`} target={"_blank"} rel={"noreferrer"}>@{ username }</a>
                     <span className="joining-date">Joined { joining ? joining : "Not Available" }</span>
                 </div>
             </div>
+            </div>
+            
             
             <section className={ bio ? "bio":"bio not-available"}>
-               { bio ? bio : "Not Available" }
+               { bio ? bio : "This profile has no bio" }
             </section>
 
             <div className="stats">

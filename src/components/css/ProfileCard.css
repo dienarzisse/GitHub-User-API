@@ -1,24 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
 .profile-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-areas: "img profile  profile" "bio bio bio" "stats  stats stats" "contact contact contact";
   background-color: rgb(30, 42, 71);
   border-radius: 0.5rem;
   padding: 2rem 1.5rem 3rem 1.5rem;
 }
+.profile-card .profile-img {
+  width: 4.375rem;
+  border-radius: 50%;
+  margin-right: 1.25rem;
+  grid-area: img;
+}
 .profile-card .profile {
+  grid-area: profile;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   margin-right: auto;
   margin-bottom: 2.125rem;
-}
-.profile-card .profile img {
-  width: 4.375rem;
-  border-radius: 50%;
-  margin-right: 1.25rem;
 }
 .profile-card .profile .profile-info {
   display: flex;
@@ -42,10 +42,12 @@
   font-size: 0.75rem;
   line-height: 1.5rem;
   font-weight: 400;
+  white-space: nowrap;
 }
 .profile-card .bio {
+  grid-area: bio;
   width: 100%;
-  height: 4.75rem;
+  max-height: 4.75rem;
   font-size: 0.75rem;
   line-height: 1.5rem;
   font-weight: 400;
@@ -53,6 +55,7 @@
   margin-bottom: 1.5rem;
 }
 .profile-card .stats {
+  grid-area: stats;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -83,6 +86,7 @@
   font-weight: 700;
 }
 .profile-card .contact-data {
+  grid-area: contact;
   margin-right: auto;
   height: 8rem;
 }
@@ -130,4 +134,81 @@
 }
 #light .profile-card .not-available img {
   filter: brightness(0) saturate(100%) invert(50%) sepia(7%) saturate(1605%) hue-rotate(178deg) brightness(94%) contrast(87%);
+}
+
+@media screen and (min-width: 768px) {
+  .profile {
+    margin-left: auto;
+  }
+  .profile-img {
+    min-width: 7.325rem;
+    margin-bottom: 1.5rem;
+  }
+  .stats {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: start !important;
+    gap: 6.25rem;
+  }
+  .data {
+    align-items: flex-start !important;
+  }
+  .contact-data {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .contact {
+    margin-bottom: 0rem !important;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .profile-card {
+    display: grid;
+    grid-template-areas: "img profile profile " "img  bio bio" "img  stats stats" "img contact contact";
+    min-height: 26.25rem !important;
+    justify-content: start;
+  }
+  .profile {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .profile-wrapper {
+    grid-area: profile;
+    margin: 0 !important;
+  }
+  .profile-img {
+    grid-area: img;
+  }
+  .profile-info {
+    display: grid !important;
+    grid-template-areas: "head head date " "username username username";
+    -moz-column-gap: 8.625rem;
+         column-gap: 8.625rem;
+    row-gap: 2px;
+    grid-area: profile;
+  }
+  .profile-info h1 {
+    margin: 0;
+    grid-area: head;
+  }
+  .profile-info span {
+    grid-area: date;
+  }
+  .profile-info a {
+    grid-area: username;
+  }
+  .bio {
+    grid-area: bio;
+  }
+  .stats {
+    grid-area: stats;
+  }
+  .contact-data {
+    grid-area: contact;
+  }
 }/*# sourceMappingURL=ProfileCard.css.map */
