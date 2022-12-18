@@ -6,6 +6,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
     background-color: $greish-blue;
     border-radius: 0.75rem;
     margin-bottom: 1rem;
@@ -37,9 +38,13 @@
         cursor: pointer;
     }
     .no-results{
-        display: block;
+        position: absolute;
+        right: 6.25rem;
+        display: none;
         margin-left: auto;
-        margin-right: 1.5rem;
+        font-size: 0.75rem;
+        overflow: hidden;
+        white-space: nowrap;
         color: #F74646;
     }
     .not-shown{
@@ -76,5 +81,9 @@
     }
     label{
         margin-right: 1rem !important;
+    }
+    .no-results{
+        display: inline !important;
+        margin-right: 1.5rem;
     }
  }

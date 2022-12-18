@@ -2,17 +2,19 @@ import { useState } from "react";
 import searchIcon from "../imgs/icon-search.svg";
 import "./css/SearchBar.css";
 
-function SearchBar({ handleSearch, show }){
+function SearchBar({ handleSearch, show, setShow }){
     const [input, setInput] = useState("");
 
     // event handlers
     const handleChange = (event) => {
         setInput(event.target.value);
+        setShow(false);
     }
 
     const handleSumbit = (event) => {
         event.preventDefault();
         handleSearch(input);
+        setInput("");
     }
 
     return (

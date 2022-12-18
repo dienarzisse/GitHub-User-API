@@ -40,7 +40,7 @@ function App() {
     <div className="App" id={theme}>
       <div className="wrapper">
         <NavBar />
-        <SearchBar handleSearch={handleSearch} show={show}/>
+        <SearchBar handleSearch={handleSearch} show={show} setShow={setShow}/>
         <ProfileCard userData={ data }/>
       </div>
     </div>
